@@ -102,7 +102,7 @@ const Slider = () => {
                     alt={person.name}
                     style={{
                       width: '100%',
-                      height: '100%',
+                      height: '550px',
                       objectFit: 'cover',
                     }}
                   />
@@ -123,6 +123,12 @@ const Slider = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="bottom-footer flex items-center justify-center p-4 bg-base-100">
+        <span className="text-sm font-bold">
+          &copy;
+          <small>Team Crusaders First Africa Life PTY</small>
+        </span>
       </div>
     </div>
   );
