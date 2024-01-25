@@ -13,6 +13,7 @@
   justify-content: center;
   height: 100%;
   gap: 1rem;
+  margin-top: 60px;
 }
 
 .wrapper:hover {
@@ -27,10 +28,6 @@
 .swiper-next {
   position: absolute;
   top: 50%;
-
-  /* transform: translateY(-50%); */
-
-  /* z-index: 10; */
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -47,6 +44,7 @@
   align-items: center;
   color: white;
   margin-right: 10px;
+  left: calc(-12px);
 }
 
 .swiper-next {
@@ -60,7 +58,7 @@
   align-items: center;
 }
 
-.slide-container {
+/* .slide-container {
   background-color: #807d7d;
   border-radius: 50%;
   width: fit-content;
@@ -69,7 +67,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 10%;
-}
+} */
 
 .slide-socials {
   display: flex;
@@ -77,6 +75,24 @@
   gap: 1rem;
   justify-content: center;
 }
+
+.logo-small {
+  width: 50px;
+  height: 50px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* #slider,
+#slider > div,
+.swiper-slide {
+  height: 100%;
+} */
 
 @tailwind base;
 @tailwind components;
