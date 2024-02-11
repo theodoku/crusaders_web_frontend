@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+:root {
+  --common-padding: 0 7%;
+}
+
 .App {
   text-align: center;
 }
@@ -13,10 +17,12 @@
   justify-content: center;
   height: 100%;
   gap: 1rem;
+  margin-top: 60px;
 }
 
 .wrapper:hover {
   transform: scale(1.02);
+  cursor: pointer;
 }
 
 .sliderWrapper {
@@ -27,10 +33,6 @@
 .swiper-next {
   position: absolute;
   top: 50%;
-
-  /* transform: translateY(-50%); */
-
-  /* z-index: 10; */
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -47,6 +49,7 @@
   align-items: center;
   color: white;
   margin-right: 10px;
+  left: calc(-12px);
 }
 
 .swiper-next {
@@ -60,17 +63,6 @@
   align-items: center;
 }
 
-.slide-container {
-  background-color: #807d7d;
-  border-radius: 50%;
-  width: fit-content;
-  height: 15rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10%;
-}
-
 .slide-socials {
   display: flex;
   flex-direction: row;
@@ -78,7 +70,255 @@
   justify-content: center;
 }
 
+.logo-small {
+  width: 50px;
+  height: 50px;
+
+  /* background-color: none; */
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.burger-menu-btn {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 20px;
+}
+
+.close-button {
+  cursor: pointer;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+  background-color: lightgray;
+}
+
+/* -------About me------- */
+.about-us-section {
+  padding: var(--common-padding);
+  color: white;
+  background-image: url('https://source.unsplash.com/random/900x900/?abstract');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  isolation: isolate;
+  margin-top: 20px;
+}
+
+.about-us-section::after {
+  content: '';
+  background:
+    linear-gradient(
+      to right,
+      rgba(57, 58, 55, 1),
+      rgba(57, 58, 55, 0.9) 50%,
+      rgba(57, 58, 55, 0.8) 60%,
+      rgba(57, 58, 55, 0.7) 70%,
+      rgba(57, 58, 55, 0.6) 80%,
+      rgba(57, 58, 55, 0.6)
+    );
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+.about-us-section .grid-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  padding-top: 80px;
+}
+
+.about-us-section .grid-wrapper .aboutus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-us-section .grid-wrapper .skill-set hr {
+  color: #fff;
+  margin-bottom: 140px;
+  margin-top: 140px;
+}
+
+.about-us-section .title {
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 88px;
+  color: #ff6b00;
+  margin-bottom: 20px;
+}
+
+.about-us-section .summary {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.5;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.about-us-section .skill-set {
+  margin-bottom: 100px;
+}
+
+.aboutlogo {
+  margin-top: 20px;
+}
+
+.about-logo {
+  width: 150px;
+  height: auto;
+}
+
+.about-us-section .skill-set ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.about-us-section .skill-set .value,
+.about-us-section .skill-set .culture,
+.about-us-section .skill-set .people {
+  flex: 1; /* Make each category occupy equal space */
+  margin: 0 20px; /* Add spacing between categories */
+}
+
+.about-us-section .skill-set .value {
+  list-style-image: url('../src/assets/Rectangle.png');
+}
+
+.about-us-section .skill-set .culture {
+  list-style-image: url('../src/assets/sq.png');
+  margin-top: 20px;
+}
+
+.about-us-section .skill-set .people {
+  list-style-image: url('../src/assets/ca.png');
+  margin-top: 20px;
+}
+
+.about-us-section .skill-set .category {
+  font-family: 'InaiMathi', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  margin-bottom: 10px;
+}
+
+.about-us-section .skill-set .sublist {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 43px;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* -------About me-------end */
+
+/* Media query for small screens */
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .burger-menu-btn {
+    display: block;
+  }
+
+  #logoNavContainer {
+    display: none;
+  }
+
+  .nav.show-nav #logoNavContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav.show-nav {
+    height: 100vh;
+    background-color: rgba(5, 4, 4, 0.5);
+    backdrop-filter: blur(5px);
+  }
+
+  .nav.show-nav a {
+    color: white;
+    margin: 20px 0;
+    padding-top: 30px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .btn {
+    margin-left: -35px;
+    margin-bottom: 35px;
+  }
+
+  #social {
+    margin-left: -40px;
+  }
+
+  .p-5.flex.items-center {
+    flex-direction: column;
+  }
+
+  /* .header-wrapper {
+    background-color: none;
+  } */
+
+  /* ---about me--- */
+  .about-us-section .grid-wrapper .aboutus {
+    max-width: 100%;
+  }
+
+  .about-us-section .grid-wrapper .aboutus h2 {
+    white-space: normal;
+  }
+
+  .about-us-section .skill-set ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-us-section .skill-set .sublist {
+    align-items: center;
+  }
+
+  /* ---about me end--- */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-

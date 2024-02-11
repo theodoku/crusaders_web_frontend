@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { loginUser, registerUser } from '../redux/userReducer';
-import backgroundImage from '../assets/Deus Vult.jpeg';
+import backgroundImage from '../assets/pexels-kampus-production-5935257.jpg';
 
 const initialState = {
   username: '',
@@ -65,10 +65,10 @@ const LoginForm = () => {
       >
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text lg:text-left">
-            <h1 className="text-5xl font-bold text-black-500">
+            <h1 className="text-5xl font-bold text-white-500">
               TEAM CRUSADERS
             </h1>
-            <p className="py-6 text-silver">Deus Vult!</p>
+            <p className="py-6 text-white">Deus Vult!</p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-primary-content">
             <form onSubmit={onSubmit} className="card-body">
@@ -81,7 +81,7 @@ const LoginForm = () => {
                     className="input-group input-group-vertical"
                     htmlFor="username"
                   >
-                    <span className="bg-green-500 text-white font-bold">
+                    <span className="bg-green-600 text-white font-bold mr-3">
                       Username
                     </span>
                     <input
@@ -98,7 +98,7 @@ const LoginForm = () => {
                   className="input-group input-group-vertical"
                   htmlFor="password"
                 >
-                  <span className="bg-green-500 text-white font-bold">
+                  <span className="bg-green-600 text-white font-bold mr-4 ">
                     Password
                   </span>
                   <input

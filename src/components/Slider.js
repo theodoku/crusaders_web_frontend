@@ -23,12 +23,11 @@ const Slider = () => {
     const fetchPersons = async () => {
       try {
         if (userId !== null) {
-          const response = await axios.get(`http://127.0.0.1:3000/api/v1/users/${userId}/people`);
+          const response = await axios.get(
+            `http://127.0.0.1:3000/api/v1/users/${userId}/people`,
+          );
           setPersons(response.data);
           setIsLoading(false);
-          if (response.data.length > 0) {
-            console.log('Person Photos:', response.data.map((person) => person.photo));
-          }
         } else {
           setIsLoading(false);
           setError('User ID is null');
@@ -40,6 +39,7 @@ const Slider = () => {
     };
     fetchPersons();
   }, [userId]);
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -102,7 +102,7 @@ const Slider = () => {
                     alt={person.name}
                     style={{
                       width: '100%',
-                      height: '100%',
+                      height: '550px',
                       objectFit: 'cover',
                     }}
                   />
@@ -110,6 +110,7 @@ const Slider = () => {
                 <div className="person-info">
                   <h3 className="person-name">{person.name}</h3>
                   <p className="person-title">{person.title}</p>
+                  <p className="person-biography">{person.biography}</p>
                   <div className="slide-socials">
                     <TiSocialFacebookCircular fill="thistle" className="icon" />
                     <TiSocialTwitterCircular fill="thistle" className="icon" />
@@ -123,6 +124,12 @@ const Slider = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="bottom-footer flex items-center justify-center p-4 bg-base-100">
+        <span className="text-sm font-bold">
+          &copy;
+          <small>Team Crusaders First Africa Life PTY</small>
+        </span>
       </div>
     </div>
   );
