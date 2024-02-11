@@ -73,7 +73,8 @@
 .logo-small {
   width: 50px;
   height: 50px;
-  background-color: none;
+
+  /* background-color: none; */
 }
 
 .nav {
@@ -98,10 +99,10 @@
 .header-wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center; 
+  align-items: center;
   justify-content: space-between;
   padding: 2px;
-  background-color:lightgray;
+  background-color: lightgray;
 }
 
 /* -------About me------- */
@@ -181,7 +182,7 @@
 }
 
 .about-logo {
-  width: 150px; 
+  width: 150px;
   height: auto;
 }
 
@@ -207,12 +208,12 @@
 
 .about-us-section .skill-set .culture {
   list-style-image: url('../src/assets/sq.png');
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .about-us-section .skill-set .people {
   list-style-image: url('../src/assets/ca.png');
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .about-us-section .skill-set .category {
@@ -221,7 +222,7 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .about-us-section .skill-set .sublist {
@@ -233,7 +234,7 @@
   font-weight: 400;
   font-size: 22px;
   line-height: 43px;
-  margin: 0; 
+  margin: 0;
   flex-direction: column;
   align-items: center;
 }
@@ -265,13 +266,13 @@
 
   .nav.show-nav {
     height: 100vh;
-    background-color: rgba(5, 4, 4, 0.5); 
+    background-color: rgba(5, 4, 4, 0.5);
     backdrop-filter: blur(5px);
   }
 
   .nav.show-nav a {
-    color:white;
-    margin: 20px 0; 
+    color: white;
+    margin: 20px 0;
     padding-top: 30px;
   }
 
@@ -292,9 +293,9 @@
     flex-direction: column;
   }
 
-  .header-wrapper {
+  /* .header-wrapper {
     background-color: none;
-  }
+  } */
 
   /* ---about me--- */
   .about-us-section .grid-wrapper .aboutus {
@@ -314,11 +315,10 @@
   .about-us-section .skill-set .sublist {
     align-items: center;
   }
+
   /* ---about me end--- */
 }
-
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
