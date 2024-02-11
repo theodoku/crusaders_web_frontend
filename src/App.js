@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AboutUs from './pages/AboutUs';
 import Persons from './pages/Persons';
 import OurProducts from './pages/OurProducts';
+import NewsBlog from './pages/NewsBlog';
 
 const App = () => (
   <div>
@@ -30,6 +31,7 @@ const App = () => (
         <Route path="/login" element={<LoginPage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/our-products" element={<OurProducts />} />
+        <Route path="/news-blog" element={<NewsBlog />} />
       </Routes>
     </BrowserRouter>
   </div>
