@@ -29,7 +29,7 @@ const AboutUs = () => {
             Face Value or Sum Assured per household to R500,000.
           </p>
           <div className="aboutlogo">
-            <img src={AboutLogo} alt="Logo" className="about-logo"/>
+            <img src={AboutLogo} alt="Logo" className="about-logo" />
           </div>
         </div>
 
