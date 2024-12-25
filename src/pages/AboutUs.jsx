@@ -1,20 +1,11 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import AboutLogo from '../assets/are.png';
 import 'aos/dist/aos.css';
+import AboutLogo from '../assets/are.png';
 
 const AboutUs = () => {
   useEffect(() => {
-    const aosScript = document.createElement('script');
-    aosScript.src = 'vendor/aos/aos.js';
-    aosScript.onload = () => {
-      AOS.init();
-    };
-    document.head.appendChild(aosScript);
-
-    return () => {
-      document.head.removeChild(aosScript);
-    };
+    AOS.init();
   }, []);
 
   return (
